@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="nb">
+    <head>
+        <meta charset="UTF-8">
+        <title>CSS Layout</title>
+        <link rel="stylesheet" type="text/css" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css"/>
+        <link rel="stylesheet" type="text/css" href="../../CSS/oblig2/oblig2.css" />
+        <link rel="stylesheet" type="text/css" href="../../CSS/oblig2/print.css" media="print"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div id="grid-container">
+        <header id="page-header">
+            <h1>En samleside for webutvikling</h1>
+            <h5>Arbeidskrav</h5>
+
+        </header>
+        <nav id="top-nav-main">
+            <h2>Logo</h2>
+            <ul class="top-menu">
+                <li><a href="../../index.html">Hjem</a></li>
+                <li class="dropdown-point">
+                    <a href="../oblig1/oblig1.html">Oblig 1</a>
+                    <ul class="dropdown-main">
+                        <li><a href="../oblig1/innholdvsdesign.html">Innhold vs design</a></li>
+                        <li><a href="../oblig1/semantikk.html">Semantiske tagger</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown-point">
+                    <a href="artikkler.html">Oblig 2</a>
+                    <ul class="dropdown-main">
+                        <li><a href="HTML-skjema.html">HTML-skjema</a></li>
+                        <li><a href="mediatyper.html">Media typer</a></li>
+                        <li><a href="csslayout.html">CSS layout</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown-point">
+                    <a >Oblig 3</a>
+                <ul class="dropdown-main">
+                    <li><a href="../oblig3/audio-video.html">Audio og video</a></li>
+                    <li><a href="../oblig3/responsivt-design.html">Responsivt design</a></li>
+                    <li><a href="../oblig3/SASS.html">SASS</a></li>
+                </ul>
+                </li>
+                <li><a href="#">Oblig 4</a></li>
+            </ul>
+        </nav>
+        <main>
+            <article id="content-box">
+                <header>
+                    <h3>CSS layout</h3>
+                </header>
+                    <img src="../../bilder/oblig2/grid.jpg" alt="css layout bilde" /> <!-- kilde: https://unsplash.com/photos/SlntP-SLi0Q -->
+                <p>
+                    I CSS har vi flere måter å definere hvor elementer skal ligge inne på siden. En gammel metode er flow, med denne metoden kan det være vanskelig å plassere ting akkurat der man vil ha dem og kan være ganske pirkete. En av de mer moderne metodene er grid, da setter man opp et rutenett og skriver inn i hvilke ruter du vil plassere ting.<br><br>
+
+                    Grid:<br>
+                    Når jeg tenker på hvordan man strukturerer en grid tenker jeg ofte på hvordan et sjakkbrett er satt opp. Hver rute har et tall og en bokstav som gir den ruten en koordinat. Når man strukturerer et grid i CSS velger man hvor stor radene og kolonnene skal være, og hvor mange rader og kolonner man vil ha. Man kan plassere elementer inn i de rutene man vil ved å angi "koordinatene" til de rutene du vil ha elementet inni. Eller så kan man gi hver rute en id og definere at dette elementet skal være i de rutene med denne id'en.<br><br>
+
+                    Flex-box:<br>
+                    Med flex-box kan man sette opp hvordan man vil at elementene skal justere seg basert på hvor mye plass det er tilgjengelig. Man kan få artikkelbokser til å vokse eller krympe etter hvor mye plass det er og hvordan de skal plassere seg i forhold til hverandre.<br><br>
+
+                    <br><br>
+                    <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">CSS-TRICKS har en veldig fin side som forklarer dette med gode illustrative bilder.</a>
+                </p>
+            </article>
+
+        </main>
+        <aside id="aside-main">
+
+            <!-- Videoen er på autoplay og loop siden den fungerer mer som dekor enn informasjon på siden min
+            ikke alle nettlesere støtter autoplay så da må den høyreklikkes for så å velge play -->
+            <section id="video">
+                <video width="100%" height="auto" controls="video" autoplay loop>
+                    <source src="../../video/oblig2/oblig2video.mp4" type="video/mp4"/>
+                </video>
+                <h5>Videoer</h5>
+                <ul>
+                    <a href="https://youtu.be/mU6anWqZJcc" target="_blank">Lær HTML og CSS</a>
+                    <a href="https://youtu.be/pQN-pnXPaVg" target="_blank">Lag en nettside på 2 timer</a>
+                    <a href="https://youtu.be/pN92rnO_n5U" target="_blank">Webdesign - wireframes</a>
+                </ul>
+            </section>
+            <section id="rel-art">
+                <h5>Responsivt design</h5>
+                <ul>
+                    <li><a href="https://www.w3schools.com/css/css_rwd_intro.asp">W3 schools</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design">Mozilla</a></li>
+                    <li><a href="https://kinsta.com/blog/responsive-web-design/">Knista - blogg</a></li>
+                    <li><a href="https://www.smashingmagazine.com/2011/01/guidelines-for-responsive-web-design/">Smashing magazine</a></li>
+                    <li><a href="https://css-tricks.com/the-difference-between-responsive-and-adaptive-design/">CSS-tricks</a></li>
+                </ul>
+            </section>
+            <section id="google-btn">
+                <a class="btn" href="https://www.google.com/search?client=firefox-b-d&q=html+forms">Google - HTML skjema</a>
+            </section>
+            <section id="tools">
+                <h5>Verktøy</h5>
+                <ul>
+                    <li><a href="https://code.visualstudio.com/">Visual Studio Code</a></li>
+                    <li><a href="https://fontawesome.com/">Font Awesome</a></li>
+                    <li><a href="https://fonts.google.com/">Google Fonts</a></li>
+                    <li><a href="https://github.com/">GitHub</a></li>
+                    <li><a href="https://wireframe.cc/">Wireframe</a></li>
+                    <li><a href="https://www.cssdesignawards.com/">CSS Design Awards - eksempler</a></li>
+                </ul>
+            </section>
+        </aside>
+        <footer>
+            &copy Mats Hansen || <a href="mailto:math@hiof.no">math@hiof.no</a> || Webutvikling 2021
+        </footer>
+        </div>
+    </body>
+</html>
+

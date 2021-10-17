@@ -1,0 +1,278 @@
+@import "_design.scss";
+@import "_article.scss";
+
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Arial", "sans-serif";
+    background-color: $main-bk;
+}
+
+html{
+    font-size: calc(1em + 1vw);
+}
+
+#grid-container{
+    display: grid;
+    flex-direction: column;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas: 
+                            "header"
+                            "main"
+                            "aside"
+                            "footer"
+    ;
+}
+
+#page-header{    
+    grid-area: header;
+    border-radius: 0 0 1rem 1rem;
+    margin: 0 0 1rem 0;
+    background-color: $dark-grey;
+    background-image: url("../../bilder/oblig3/header.jpg"); /* Kilde: https://www.pexels.com/photo/green-leaves-1072179/ */
+    background-size: cover;
+    @include header-skygge;
+    background-position: center;
+
+    h1 h5{
+        display: flex;
+        align-self: start;
+    }    
+}
+
+#top-nav-main{
+    border-radius: 0 0 1rem 1rem;
+    background-color: $dark-grey-t;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    font-size: 0.7rem;
+}
+
+header {
+    h1{
+        text-align: center;
+        margin: 0 0 0 0;
+        background-image: linear-gradient( #20202000 0%, $dark-grey-t 100%);
+        color: white;
+        @include text-outline;
+        padding-top: 8rem;
+    }
+
+    h5{
+        padding: 0.5rem 0 0 0.5rem;
+        margin: 0;
+        font-size: 0.5rem;
+    }
+
+    h2{
+        margin: 0 0 1rem 0;
+        color: white;
+        @include text-outline;
+    }
+
+    a{
+        color: white;
+        @include text-outline;
+        text-decoration: underline solid white;
+    }
+
+    a:hover{
+        color: $hover;
+        text-decoration: underline wavy white;
+    }
+}
+
+main{
+    grid-area: main;
+    display: flex;
+    flex-basis: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    background-color: $main-bk;
+    margin: 1rem 0 2rem 0;
+    margin-bottom: auto;
+}
+
+article{
+    position: relative;
+    background-color: white;
+    border-radius: 1rem 1rem 1rem 1rem;
+    width: 80%;
+    @include element_skygge;
+    text-shadow: none;
+
+    header{
+        border-radius: 1rem 1rem 0 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: 2;
+        text-align: center;
+        background-color: $dark-grey-t;
+        color: white;
+        @include text-outline;
+    }
+
+    h2 a{
+        @include text-outline;       
+    }
+
+    img{
+        border-radius: 1rem 1rem 1rem 1rem;
+        width: 100%;
+        height: 100%;
+        max-height: 20rem;
+        z-index: 1;
+        object-fit: cover;
+    }
+
+    p{
+        padding: 0 1rem 0 1rem;
+    }
+
+    footer{
+        border-radius: 0 0 1rem 1rem;
+        position: absolute;
+        bottom: 0;
+        background-color: $dark-grey-t;
+        border-top: none;
+        padding: 0;
+        margin: 0;
+        z-index: 2;
+        width: 100%;
+
+        &a{
+            font-size: 1.5em;
+            color: white;
+            text-decoration: none;
+            @include text-outline;
+        }
+    }
+
+    a:hover, a:focus{
+        color: $hover;
+        text-decoration: underline wavy white; 
+    }
+}
+
+#aside-main{
+    border-radius: 1rem 1rem 0 0;
+    width:100%;
+    padding: 0 0 1rem 0;    
+    grid-area: aside;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: $dark-grey;
+    color: white;
+    margin-top: 2rem;
+    margin-bottom: auto;    
+}
+
+aside{
+    h5{
+        width:100%;
+        margin: 0.3rem 0 0.3rem 0;
+    }
+
+    ul{
+        align-items: center;
+        list-style: none;
+        padding: 0 0 1rem 0;
+        margin: 0;
+        line-height: 2rem;
+    }
+
+    section{
+        width:100%;
+        border-top: 0.1rem solid $main-bk;
+    }
+
+    video{
+        width:100%;
+    }
+
+    a{
+        color: white;
+
+        &:hover{
+            color: $hover;
+            text-decoration: underline wavy white;
+        }
+    }
+}
+
+#video{
+    border-top: none;
+}
+
+footer{
+    display: flex;
+    background-color: $dark-grey;
+    grid-area: footer;
+    justify-content: center;
+    color: white;
+    padding: 1rem 0 1rem 0;
+    border-top: 0.1rem solid white;
+    font-size: 0.7em;
+
+    a{
+        color: white;
+        padding: 0 0.5rem 0 0.5rem;
+    }
+}
+
+#top-nav-main{
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+}
+
+nav{
+    ul{
+        display: flex;
+        gap: 1rem;
+        list-style: none;
+        justify-content: center;
+        margin: 0 auto 0 auto; 
+        padding: 0;    
+    }
+
+    a{
+        cursor: pointer;
+    }
+}
+
+.dropdown-main{
+    display: none;
+    position: absolute;
+    color: black;
+    z-index: 10;
+    background-color: $dark-grey;
+    border: 0.2rem solid black;
+    border-radius: 1rem;
+    width: auto;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+
+    li{
+        padding: 1rem;    
+    }
+}
+
+.top-menu .dropdown-point:hover > ul, ul li ul:hover, .top-menu .dropdown-point:active > ul, ul li ul:active .top-menu .dropdown-point:focus > ul, ul li ul:focus{
+    display: flex;
+    flex-direction: column;    
+}
+
+
+
+
+@import"_responsive.scss";

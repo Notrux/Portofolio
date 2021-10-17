@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="nb">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="keywords" content="oblig, hiof, webutvikling, høgskolen i Østfold">
+        <meta name="description" content="Oblig side i webutvikling for Mats Hansen, student ved høgskolen i Østfold">
+        <meta name="author" content="Mats Hansen">
+
+        <title>Responsivt design</title>
+
+        <link rel="stylesheet" type="text/css" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css"/>
+        <link rel="stylesheet" type="text/css" href="../../CSS/oblig3/main.css" title="SCSS"/>
+        <link rel="alternate stylesheet" type="text/css" href="../../CSS/oblig2/print.css" media="print"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div id="grid-container">
+
+        <header id="page-header">
+            <h5>Arbeidskrav</h5>
+            <h1>Webutvikling</h1>
+            <nav id="top-nav-main">
+                <ul class="top-menu">
+                    <li><a href="../../index.html">Hjem</a></li>
+                    <li class="dropdown-point">
+                        <a >Oblig 1</a>
+                        <ul class="dropdown-main">
+                            <li><a href="../oblig1/oblig1.html">Oblig 1 forside</a></li>
+                            <li><a href="../oblig1/innholdvsdesign.html">Innhold vs design</a></li>
+                            <li><a href="../oblig1/semantikk.html">Semantiske tagger</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown-point">
+                        <a >Oblig 2</a>
+                        <ul class="dropdown-main">
+                            <li><a href="../oblig2/artikkler.html">Oblig 2 forside</a></li>
+                            <li><a href="../oblig2/HTML-skjema.html">HTML-skjema</a></li>
+                            <li><a href="../oblig2/mediatyper.html">Media typer</a></li>
+                            <li><a href="../oblig2/csslayout.html">CSS layout</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown-point">
+                        <a >Oblig 3</a>
+                    <ul class="dropdown-main">
+                        <li><a href="audio-video.html">Audio og video</a></li>
+                        <li><a href="responsivt-design.html">Responsivt design</a></li>
+                        <li><a href="SASS.html">SASS</a></li>
+                    </ul>
+                    </li>
+                    <li><a href="#">Oblig 4</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <article class="art-content">
+                <header>
+
+                    <h3>Responsivt design</h3>
+
+                </header>  
+                <img src="../../bilder/oblig3/responsive.jpg" alt="video illustrativt bilde" /> <!-- kilde: http://127.0.0.1:5500/HTML/Oblig%203/index.html-->
+                <h4>Media queries</h4>
+                <p>
+                    
+                    Media queries en funksjon i CSS sombenyttes når man ønsker å tilpasse nettsiden etter hvilken type enhet brukeren benytter eller størrelsen på enheten til brukeren. Formfaktoren og størrelsen til enheten gjør det ofte hensiktsmessig å justere og tilpasse siden for å gjøre ting oversiktlig og lesbart. En media query består av en media type og logiske operatorer. 
+                    </p>
+                    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries">Les mer om media queries her</a>
+                    <h4>Media types</h4>
+                    <p>
+                    
+                    Noen av media typene vi har er screen, print,  speech og all . 
+                    Screen benytter vi for enheter som har skjermer, de fleste vil nok tenke at det er litt rart siden de fleste er vant med å bruke en enhet med skjerm når de bruker internett men dette kommer vi til å se nærmere på. 
+                    Print benyttes til å gjøre nettsiden utskriftvennlig, det er ikke alle elementene på nettsiden som nødvendigvis gir mening å ha med når man skal skrive ut nettsiden. Elementer som videoer og menyer kan ofte tenkes at er uinteressant å printe ut, vi kan også bruke en egen styling som ser bedre ut på papir.
+                    Speech brukes til å gjøre nettsiden mer vennlig for skjermlesere for å gjøre nettsiden mer tilgjengelig for de som skulle trenge å benytte slike verktøy.
+                    All er standarden og benyttes der annet ikke er spesifisert
+                    </p>
+                    <h4>Logiske operatorer</h4>
+                    <p>
+                    And benyttes til å kombinere flere media features hvi man vil at det skal gjelde for flere typer enheter og størelser.
+                    Not benyttes hvis du vil at noe i stilarket ikke skal benyttes på disse enhetene.
+                    Only benyttes når man vil at det bare skal gjelde enheter som basser beskrivelsen eksakt, dette er nyttig for å forhindre eldre nettlesere å tolke media queries feil.
+                    Komma &#40;,&#41; brukes til å kombinere flere media queries til samme kode i stilarket.                    
+                    </p>
+                    
+                    <!-- kilde for teksten over her: https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries -->
+                    <h4>Responsivitet</h4>
+                    <p>
+                    
+                    En god responsiv nettside tilpasser seg godt til alle skjermstørrelser, det er viktig at ting ikke blir uoversiktlig  og at innhold forsvinner på forskjellige skjermstørelser. Det er også viktig at skriftstørrelsen ikke blir for stor eller for liten slik at det er enkelt å lese, i dag er det vanlig å designe nettsider etter det de kaller mobile first prinsippet. Det vil si at man designer nettsiden først til å se bra ut på telefon så skalerer man ting og flytter ting rundt til å passe på iPad og datamaskin. På mobil legger man gjerne ting i en kolonne nedover og er relativt oversiktlig når man skal plassere ting mer horisontalt senere.
+                    </p>
+                    <h4>Metoder for å gjøre nettsiden mer responsiv</h4>
+                    <p>
+                    
+                    &#10094;meta name="viewport" content="width=device-width, initial-scale=1.0"&#10095; gir nettlseren instuksjoner om hvordan kontrollere nettsidens dimensjoner og skalering.
+                    font-size: calc(1em + 1vw); gjør at fontstørelsen kalkuleres utifra størelsen på skjermen og vinduet.
+                    Man kan også bruke grid til å lage egne grid til forskjellige media queries for å plassere elementer på forskjellige plasser. Inni gridet kan man plassere flexbox elementer som kan justere seg og flytte på seg automatisk avhengig av hvor stor skjermen er.                    
+                    </p>
+                    <a href="https://css-tricks.com/snippets/css/complete-guide-grid/">Les mer om grid her</a><br>
+                    <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/s">Les mer om flexbox her</a>
+                    <!-- kilde for teksten over her: https://www.w3schools.com/css/css_rwd_viewport.asp , https://css-tricks.com/molten-leading-css/ -->
+                    <h4>Utfordringer</h4>
+                    <p>
+                    
+                    Alt er lett når man kan det, men som nybegynner er dette noe man må lese seg opp på og eksperimentere seg frem til for å forstå. Det er ikke alltid ting havner der man hadde tenkt eller ser ut som planlagt, men det er som regel en løsning på problemet.
+                    </p>
+                    
+
+                
+
+                <footer><p></p></footer>
+            </article>
+        </main>
+
+        <aside id="aside-main">
+            <h4>Resurser</h4>
+            <section id="video">
+                <video controls loop>
+                    <source src="../../video/oblig2/oblig2video.mp4" type="video/mp4"/>
+                    Video taggen fungerer ikke i nettlseseren din
+                </video>
+                <ul>
+                    <li><h5>Videoer</h5></li>
+                    <li><a href="https://youtu.be/mU6anWqZJcc" target="_blank">Lær HTML og CSS</a></li>
+                    <li><a href="https://youtu.be/pQN-pnXPaVg" target="_blank">Lag en nettside på 2 timer</a></li>
+                    <li><a href="https://youtu.be/pN92rnO_n5U" target="_blank">Webdesign - wireframes</a></li>
+                </ul>
+            </section>
+            <section id="rel-art">
+
+                <ul>
+                    <li><h5>Responsivt design</h5></li>
+                    <li><a href="https://www.w3schools.com/css/css_rwd_intro.asp">W3 schools</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design">Mozilla</a></li>
+                    <li><a href="https://kinsta.com/blog/responsive-web-design/">Knista - blogg</a></li>
+                    <li><a href="https://www.smashingmagazine.com/2011/01/guidelines-for-responsive-web-design/">Smashing magazine</a></li>
+                    <li><a href="https://css-tricks.com/the-difference-between-responsive-and-adaptive-design/">CSS-tricks</a></li>
+                </ul>
+            </section>
+            <section id="google-btn">
+                <h5><a class="btn" href="https://www.google.com/search?client=firefox-b-d&q=html+forms">Google - HTML skjema</a></h5>
+            </section>
+            <section id="tools">
+                <ul>
+                    <li><h5>Verktøy</h5></li>
+                    <li><a href="https://code.visualstudio.com/">Visual Studio Code</a></li>
+                    <li><a href="https://fontawesome.com/">Font Awesome</a></li>
+                    <li><a href="https://fonts.google.com/">Google Fonts</a></li>
+                    <li><a href="https://github.com/">GitHub</a></li>
+                    <li><a href="https://wireframe.cc/">Wireframe</a></li>
+                    <li><a href="https://www.cssdesignawards.com/">CSS Design Awards - eksempler</a></li>
+                </ul>
+            </section>
+        </aside>
+
+        <footer>
+            &copy; Mats Hansen ||  <a href="mailto:math@hiof.no"> math@hiof.no </a>  || Webutvikling 2021
+        </footer>
+
+        </div>
+    </body>
+</html>
+

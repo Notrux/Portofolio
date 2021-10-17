@@ -1,0 +1,19 @@
+
+// farger
+$main-bk: #efefef;
+$hover: #cdcdcd;
+$dark-grey-t: #202020eb;
+$dark-grey: #202020;
+
+
+// skygger
+@mixin element-skygge{
+    box-shadow: 5px 5px 10px grey;
+}
+@mixin header-skygge{
+    box-shadow: 10px 10px 20px 1px grey, -10px 10px 20px 1px grey;
+}
+@mixin text-outline{
+    text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black; 
+    /* kilde: https://stackoverflow.com/questions/4919076/outline-effect-to-text */
+}

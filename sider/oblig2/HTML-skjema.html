@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="nb">
+    <head>
+        <meta charset="UTF-8">
+        <title>HTML-skjema</title>
+        <link rel="stylesheet" type="text/css" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css"/>
+        <link rel="stylesheet" type="text/css" href="../../CSS/oblig2/oblig2.css" />
+        <link rel="stylesheet" type="text/css" href="../../CSS/oblig2/print.css" media="print"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div id="grid-container">
+        <header id="page-header">
+            <h1>En samleside for webutvikling</h1>
+            <h5>Arbeidskrav</h5>
+
+        </header>
+        <nav id="top-nav-main">
+            <h2>Logo</h2>
+            <ul class="top-menu">
+                <li><a href="../../index.html">Hjem</a></li>
+                <li class="dropdown-point">
+                    <a href="../oblig1/oblig1.html">Oblig 1</a>
+                    <ul class="dropdown-main">
+                        <li><a href="../oblig1/innholdvsdesign.html">Innhold vs design</a></li>
+                        <li><a href="../oblig1/semantikk.html">Semantiske tagger</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown-point">
+                    <a href="artikkler.html">Oblig 2</a>
+                    <ul class="dropdown-main">
+                        <li><a href="HTML-skjema.html">HTML-skjema</a></li>
+                        <li><a href="mediatyper.html">Media typer</a></li>
+                        <li><a href="csslayout.html">CSS layout</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown-point">
+                    <a >Oblig 3</a>
+                <ul class="dropdown-main">
+                    <li><a href="../oblig3/audio-video.html">Audio og video</a></li>
+                    <li><a href="../oblig3/responsivt-design.html">Responsivt design</a></li>
+                    <li><a href="../oblig3/SASS.html">SASS</a></li>
+                </ul>
+                </li>
+                <li><a href="#">Oblig 4</a></li>
+            </ul>
+        </nav>
+        <main>
+            <article id="content-box">
+                <header>
+                    <h3>HTML-skjema</h3>
+                </header>
+                    <img src="../../bilder/oblig2/html-skjema.jpg" alt="html-skjema bilde" /> <!-- kilde: https://www.freepik.com/free-vector/online-registration-concept_3316715.htm#page=1&query=sign%20up&position=23 -->
+                <p>
+                    Form taggen benyttes når man vil at en bruker skal fylle ut et skjema, det gjøres ved at vi plasserer input elementer i skjemaet som brukeren kan fylle ut. Hvilke typer input elementer vi velger å ta med avhenger av hvilken type skjema det er og hvilken informasjon vi ønsker å motta fra brukeren. Noen av de mer vanlige er ting som navn, fødselsdato, e-post, telefon nummer og passord.<br><br>
+
+                    &lt;input&gt; taggen benyttes når vi ønsker input fra brukeren, den setter opp et element basert på hvilken type="#" vi gir den. Jeg har lagt inn et skjema under med de forskjellige typene og kommentert inn hvilken type="#" og tagger som er brukt.<br><br>
+                    &lt;label&gt; taggen benyttes til å sette en "merkelapp" på inputen, man skal gi label og input samme id="#" for å koble dem sammen. En label vil vises som vanlig tekst på siden men når man klikker på den vil den aktivere den inputen som er koblet opp mot den og man kan begynne å skrive.<br>
+                </p>
+                <form name="sign-up" action="#">
+                    <p>
+                        <label for="fnavn">Fornavn:</label><br>
+                        <input type="text" id="fnavn" placeholder="type=&ldquo;text&rdquo;" name="fnavn"><br><br>
+                    </p>
+                    <p>
+                        <label for="enavn">Etternavn:</label><br>
+                        <input type="text" id="enavn" placeholder="type=&ldquo;text&rdquo;" name="enavn"><br><br>
+                    </p>
+                    <p>
+                        <label for="bdag">Fødselsdag: (type=&ldquo;date&rdquo;)</label><br>
+                        <input type="date" id="bdag" placeholder="type=&ldquo;date&rdquo;" name="bdag"><br><br>
+                    </p>
+                    <p>
+                        <label for="email">E-post:</label><br>
+                        <input type="email" id="email" placeholder="type=&ldquo;email&rdquo;" name="email"><br><br>
+                    </p>
+                    <p>
+                        <label for="tel">Telefon nummer:</label><br>
+                        <select>
+                                <option>+47</option>
+                        </select>
+                        <input type="tel" id="tel" name="tel" placeholder="type=&ldquo;tel&rdquo;" minlength="8" maxlength="8" pattern="[0-9]"><br><br>
+                    </p>
+                    <p>
+                        <label for="pass">Passord:</label><br>
+                        <input type="password" id="pass" placeholder="type=&ldquo;password&rdquo;" name="pass"><br><br>
+                    </p>
+                    <p>
+                        <label>Velg kjønn:   (type=&ldquo;radio&rdquo;)</label><br>
+                        <input type="radio" id="mann" value="mann">
+                        <label for="mann">Mann</label>
+                        <input type="radio" id="kvinne" value="kvinne">
+                        <label for="kvinne">Kvinne</label><br><br>
+                    </p>
+                    <p>
+                        <label for="last-opp-fil">Last opp fil:   (type=&ldquo;file&rdquo;)</label><br>
+                        <input type="file" id="last-opp-fil" name="last-opp-fil"><br><br>
+                    </p>
+                    <p>
+                        <label>Velg by:     (&lt;select&gt; &lt;option&gt; valg alternativ &lt;/option&gt; &lt;/select&gt;)</label><br>
+                            <select>
+                                <option>Halden</option>
+                                <option>Fredrikstad</option>
+                            </select><br><br>
+                    </p>
+                    <p>
+                        <label for="com-box">Kommentar boks: (&lt;textarea&gt;&lt;/textarea&gt;)</label><br>
+                        <textarea id="com-box" form="com-box" placeholder="Skriv en kommentar..."></textarea><br><br>
+                    </p>
+                    <p>
+                        <label>
+                            Sjekk boks: (type=&ldquo;checkbox&rdquo;)<br>
+                            <input type="checkbox" value="vilkår">
+                            Jeg har lest og akseptert <a href="#">vilkårene</a> for nettstedet.
+                        </label><br><br>
+                        Send og tilbakestill: (type=&ldquo;submit&rdquo; og type=&ldquo;reset&rdquo;)<br>
+                        <input type="submit" value="Send"/>
+                        <input type="reset" value="tilbakestill"/>
+                    </p>
+                </form>
+            </article>
+
+        </main>
+        <aside id="aside-main">
+
+            <!-- Videoen er på autoplay og loop siden den fungerer mer som dekor enn informasjon på siden min
+            ikke alle nettlesere støtter autoplay så da må den høyreklikkes for så å velge play -->
+            <section id="video">
+                <video width="100%" height="auto" controls="video" autoplay loop>
+                    <source src="../../video/oblig2/oblig2video.mp4" type="video/mp4"/>
+                </video>
+                <h5>Videoer</h5>
+                <ul>
+                    <a href="https://youtu.be/mU6anWqZJcc" target="_blank">Lær HTML og CSS</a>
+                    <a href="https://youtu.be/pQN-pnXPaVg" target="_blank">Lag en nettside på 2 timer</a>
+                    <a href="https://youtu.be/pN92rnO_n5U" target="_blank">Webdesign - wireframes</a>
+                </ul>
+            </section>
+            <section id="rel-art">
+                <h5>Responsivt design</h5>
+                <ul>
+                    <li><a href="https://www.w3schools.com/css/css_rwd_intro.asp">W3 schools</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design">Mozilla</a></li>
+                    <li><a href="https://kinsta.com/blog/responsive-web-design/">Knista - blogg</a></li>
+                    <li><a href="https://www.smashingmagazine.com/2011/01/guidelines-for-responsive-web-design/">Smashing magazine</a></li>
+                    <li><a href="https://css-tricks.com/the-difference-between-responsive-and-adaptive-design/">CSS-tricks</a></li>
+                </ul>
+            </section>
+            <section id="google-btn">
+                <a class="btn" href="https://www.google.com/search?client=firefox-b-d&q=html+forms">Google - HTML skjema</a>
+            </section>
+            <section id="tools">
+                <h5>Verktøy</h5>
+                <ul>
+                    <li><a href="https://code.visualstudio.com/">Visual Studio Code</a></li>
+                    <li><a href="https://fontawesome.com/">Font Awesome</a></li>
+                    <li><a href="https://fonts.google.com/">Google Fonts</a></li>
+                    <li><a href="https://github.com/">GitHub</a></li>
+                    <li><a href="https://wireframe.cc/">Wireframe</a></li>
+                    <li><a href="https://www.cssdesignawards.com/">CSS Design Awards - eksempler</a></li>
+                </ul>
+            </section>
+        </aside>
+        <footer>
+            &copy Mats Hansen || <a href="mailto:math@hiof.no">math@hiof.no</a> || Webutvikling 2021
+        </footer>
+        </div>
+    </body>
+</html>
+

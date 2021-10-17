@@ -1,0 +1,466 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Arial", "sans-serif";
+    background-color: #efefef;
+}
+
+html{
+    font-size: calc(1em + 1vw);
+}
+
+
+
+#grid-container{
+    display: grid;
+    flex-direction: column;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas: 
+        "header"
+        "main"
+        "aside"
+        "footer"
+    ;
+}
+
+#page-header{
+    
+    grid-area: header;
+    border-radius: 0 0 1rem 1rem;
+    margin: 0 0 1rem 0;
+    background-color: #202020;
+    background-image: url("../../bilder/oblig3/header.jpg"); /* Kilde: https://www.pexels.com/photo/green-leaves-1072179/ */
+    background-size: cover;
+    box-shadow: 10px 10px 20px 1px grey, -10px 10px 20px 1px grey;
+    /*background-attachment: fixed;
+    background-size: 120%;*/
+    background-position: center;
+    
+}
+
+#page-header h1 h5{
+    display: flex;
+    align-self: start;
+    
+    
+}
+
+#top-nav-main{
+    border-radius: 0 0 1rem 1rem;
+    background-color: #202020eb;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    font-size: 0.7rem;
+    
+    
+}
+
+
+
+header h1{
+    text-align: center;
+    margin: 0 0 0 0;
+    background-image: linear-gradient( #20202000 0%, #202020eb);
+    /*background-color: #202020;*/
+    color: white;
+    text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black; /* kilde: https://stackoverflow.com/questions/4919076/outline-effect-to-text */
+    
+    padding-top: 8rem;
+}
+
+header h5{
+    padding: 0.5rem 0 0 0.5rem;
+    margin: 0;
+    font-size: 0.5rem;
+}
+
+header h2{
+    margin: 0 0 1rem 0;
+    color: white;
+    text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black; /* kilde: https://stackoverflow.com/questions/4919076/outline-effect-to-text */
+       
+}
+
+header a{
+    color: white;
+    text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black; /* kilde: https://stackoverflow.com/questions/4919076/outline-effect-to-text */
+    
+}
+
+header a:hover{
+    color: #cdcdcd;
+    text-decoration: underline wavy white;
+}
+
+header a{
+    text-decoration: underline solid white;
+}
+
+
+main{
+    grid-area: main;
+    display: flex;
+    flex-basis: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    background-color: #efefef;
+    margin: 1rem 0 2rem 0;
+    margin-bottom: auto;
+
+}
+
+article{
+    position: relative;
+    background-color: white;
+    border-radius: 1rem 1rem 1rem 1rem;
+    /*display: grid;
+    /*flex-basis: 80%;*/
+    width: 80%;/*
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: 
+        "header"
+        "content"
+        "footer"
+    ;*/
+    box-shadow: 5px 5px 10px grey;
+    text-shadow: none;
+
+}
+
+article:hover{
+    box-shadow: 10px 10px 10px grey;
+}
+
+article header{
+    border-radius: 1rem 1rem 0 0;
+    /*grid-area: header;*/
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+    text-align: center;
+    background-color: #202020eb;
+    color: white;
+    text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black; /* kilde: https://stackoverflow.com/questions/4919076/outline-effect-to-text */
+}
+
+article img{
+    border-radius: 1rem 1rem 1rem 1rem;
+    width: 100%;
+    height: 100%;
+    max-height: 20rem;
+   /*grid-area: content;
+    grid-row-start: 1;
+    grid-row-end: 4;*/
+    z-index: 1;
+    object-fit: cover;
+}
+article footer{
+    border-radius: 0 0 1rem 1rem;
+    position: absolute;
+    bottom: 0;
+    background-color: #202020eb;
+    border-top: none;
+    padding: 0;
+    margin: 0;
+    z-index: 2;
+    width: 100%;
+}
+
+article footer a{
+    font-size: 1.5em;
+}
+
+article p{
+    padding: 0 1rem 0 1rem;
+}
+
+article footer a{
+    color: white;
+    text-decoration: none;
+    text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black; /* kilde: https://stackoverflow.com/questions/4919076/outline-effect-to-text */
+}
+
+article footer a:hover, a:focus{
+    color: #cdcdcd;
+    text-decoration: underline wavy white;
+    
+}
+
+article h2 a{       
+    text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black; /* kilde: https://stackoverflow.com/questions/4919076/outline-effect-to-text */
+}
+
+.art-content{
+    max-width: 90%;
+    min-width: 90%;
+    min-height: 100%;
+    max-height: 100%;
+
+}
+
+.art-content article, .art-content footer, .art-content header{
+    /*background-color: black;*/
+    /*all: revert;*/
+    flex-basis: auto;
+
+}
+
+.art-content header{
+    position: relative;
+    top: 0;
+    background-color: #202020;
+    margin-top: 0;
+}
+
+.art-content h3{
+    margin-top: 0;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.art-content footer{
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    background-color: #202020;
+
+}
+.art-content p{
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    padding: 0 1.5rem 0 1.5rem;
+    text-align: left;
+
+}
+
+.art-content article{
+    margin-bottom: 2rem;
+    box-shadow: 5px 5px 10px grey;
+
+}
+
+
+
+
+
+#aside-main{
+    border-radius: 1rem 1rem 0 0;
+    width:100%;
+    padding: 0 0 1rem 0;
+    
+    grid-area: aside;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: #202020;
+    color: white;
+    margin-top: 2rem;
+    margin-bottom: auto;
+    
+}
+
+aside h5{
+    width:100%;
+    margin: 0.3rem 0 0.3rem 0;
+
+}
+
+
+
+aside ul{
+    align-items: center;
+    list-style: none;
+    padding: 0 0 1rem 0;
+    margin: 0;
+    line-height: 2rem;
+}
+
+aside section{
+    width:100%;
+    border-top: 0.1rem solid #efefef;;
+}
+
+aside video{
+    width:100%;
+}
+
+#video{
+    border-top: none;
+}
+
+aside a{
+    color: white;
+}
+
+aside a:hover{
+    color: #cdcdcd;
+    text-decoration: underline wavy white;
+}
+
+footer{
+    display: flex;
+    background-color: #202020;
+    grid-area: footer;
+    justify-content: center;
+    color: white;
+    padding: 1rem 0 1rem 0;
+    border-top: 0.1rem solid white;
+    font-size: 0.7em;
+
+    
+}
+
+footer a{
+    color: white;
+    padding: 0 0.5rem 0 0.5rem;
+}
+
+#top-nav-main{
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    
+}
+
+nav ul{
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+    justify-content: center;
+    margin: 0 auto 0 auto; 
+    padding: 0;
+
+}
+
+nav a{
+    cursor: pointer;
+}
+
+
+
+.dropdown-main{
+    display: none;
+    color: black;
+    z-index: 10;
+    
+}
+.dropdown-main{
+    display: none;
+    position: absolute;
+    background-color: #202020;
+    border: 0.2rem solid black;
+    border-radius: 1rem;
+    width: auto;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+
+}
+
+.dropdown-main li{
+    padding: 1rem;
+
+}
+
+
+.top-menu .dropdown-point:hover > ul, ul li ul:hover, .top-menu .dropdown-point:active > ul, ul li ul:active .top-menu .dropdown-point:focus > ul, ul li ul:focus{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+
+
+@media only screen and (min-width: 900px), (orientation: landscape){
+
+    html{
+        font-size: 1.5em;
+    }
+
+    #grid-container{
+        display: grid;
+        flex-direction: column;
+        grid-template-columns: 3rem auto 12rem 3rem;
+        grid-template-rows: auto auto auto;
+        grid-template-areas: 
+            "header header header header"
+            ". main aside ."
+            "footer footer footer footer"
+        ;
+    }
+
+    aside{
+        font-size: 1em;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        margin-left: 1rem;
+        
+        
+        
+    }
+
+    #aside-main{
+        border-radius: 1rem 1rem 1rem 1rem;
+        box-shadow: 10px 10px 10px grey;
+        margin-top: 1rem;
+    }
+    
+    article{
+        min-width: 15rem;
+        max-width: 20rem;
+        flex-basis: 10%;
+        flex-grow: 1;
+        height: auto;
+        max-height: 13rem;
+        margin: 0 1rem 0 1rem;
+        text-align: center;
+    }
+
+    article footer{
+        font-size: 1em;
+    }
+
+    main{
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;       
+        justify-content: center;
+        grid-area: main;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: baseline;
+        gap: 1rem;
+        
+        
+        
+        
+    }
+
+
+
+    #page-header{
+        
+        background-position: center;
+        
+    }
+
+    article footer a{
+        font-size: 1em;
+    }
+
+    footer{
+        font-size: 0.7em;
+        margin: 2rem 0 0 0;
+        padding: 0.5rem;
+    }
+
+}
+

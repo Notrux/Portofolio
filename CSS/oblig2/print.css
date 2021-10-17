@@ -1,0 +1,33 @@
+#page-header, #top-nav-main, nav, aside, footer{
+    display: none;
+}
+
+#grid-container{
+    display: block;
+}
+
+article{
+    font-family: 'Arial', 'serif';
+    font-size: 18px;
+    flex-basis: 100%;
+    /*page-break-after: always;*/
+    box-shadow: none;
+    float: left;
+    page-break-inside: avoid;
+}
+
+img{
+    max-width: 60%;
+    padding: 1rem;
+    margin: 1rem;
+    break-inside: avoid;
+    page-break-inside: avoid;
+}
+
+p{
+    float: left;
+}
+
+a{
+    display: none;
+}

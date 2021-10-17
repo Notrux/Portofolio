@@ -1,0 +1,208 @@
+*{
+box-sizing: border-box;
+}
+
+.container{
+	max-width: 1000px;
+	width: 100%;
+	min-width: 400px;
+	margin: 0px auto;
+	padding: 0px;
+	overflow: hidden;
+}
+
+body{
+	margin: 0px;
+	clear: both;
+}
+
+
+#headerLogo{
+	float: left;
+	margin: 10px 2rem 1rem 0;
+	font-weight: 100;
+	text-transform: uppercase;
+	letter-spacing: 4px;
+	padding-right: 1rem;
+	padding-left: 1rem;
+	color: black;
+}
+
+header{
+    background-color: #262937;
+	height: 50px;
+	position: static;
+	width: 100%;
+}
+
+nav ul{
+	list-style: none;
+	float: right;
+	margin: 15px 0 1rem 0;
+	padding: 0;
+}
+
+nav {
+
+}
+
+nav li{
+    display: inline-block;
+    margin: 0 1rem 0 0;
+	padding: 0;
+}
+
+header nav{
+	overflow: auto;
+	max-width: 1000px;
+	width: 100%;
+	margin: 0px auto;
+	padding: 0px;
+}
+
+header li{
+    margin-left: 15px;
+}
+
+header a {
+	color: #fff;
+	font-weight: 500;
+	text-decoration: none;
+}
+
+main{
+	width: 70%;
+	float: left;
+	margin-bottom: 1rem;
+}
+
+aside{
+	width: 30%;
+	float: right;
+	padding: 0 0 0 3rem;
+}
+
+aside ul{
+	list-style: none;
+	padding: 0 0 0 0;
+}
+
+aside a, h5{
+	color: black;
+	font-weight: 600;
+	font-size: 1rem;
+	text-decoration: none;
+	line-height: 2.5ex;
+}
+
+aside h5{
+	margin: 1rem 0 0 0;
+}
+
+aside a:hover, header a:hover{
+	text-decoration: underline;
+}
+
+footer{
+	color: #c6c6c6;
+	border-top: 1px solid #c6c6c6;
+	padding: 0.5%;
+	clear: both;
+	text-align: center;
+	display: block;
+	width: 100%;
+	background-color: white;
+}
+
+header, main, aside, footer {
+	font-family: arial, sans-serif;
+}
+
+h1{
+	padding: 0 0 0 1rem;
+}
+
+h2{
+	padding: 0 0 0 1rem;
+}
+
+main h1{
+	text-align: center;
+	margin-bottom: 0;
+}
+
+.artikkler_oblig h1{
+	margin-top: 0;
+	padding: 0 1rem 0;
+}
+
+.artikkler{
+	float: left;
+	line-height: 2.5ex;
+	min-width: 45%;
+	max-width: 45%;
+	height: 25rem;
+	margin: 2.5% 2.5% 2.5% 2.5%;
+	padding: 0;
+	background-color: #ffffff;
+	box-shadow: 5px 5px 10px grey;
+}
+
+.artikkler:hover{
+	box-shadow: 5px 5px 20px grey;
+	transform: scale(1.02);
+}
+
+.artikkler_oblig_meny{
+	/*float: left;*/
+	line-height: 2.5ex;
+	min-width: 95%;
+	max-width: 95%;
+	margin: 2% 2.5% 1% 2.5%;
+	padding: 0.1rem 0 0 0;
+	background-color: #ffffff;
+	box-shadow: 5px 5px 10px grey;
+}
+
+.artikkler_oblig_meny:hover{
+	box-shadow: 5px 5px 20px grey;
+}
+
+.artikkler_oblig{
+	float: left;
+	overflow: auto;
+	width: auto;
+	max-width: 95%;
+	min-width: 95%;
+	margin: 2%;
+	padding: 1rem;
+	background-color: #ffffff;
+	box-shadow: 5px 5px 10px grey;
+}
+
+.button{
+	display: inline-block;
+	background-color: black ;
+	color: white;
+	padding: 1rem 1rem;
+	margin: 1rem 1rem 1rem 1rem;
+	text-decoration: none;
+}
+
+.button:hover{
+	background-color: #1c1c1c;
+}
+
+p{
+	margin: 0 1rem 0 1rem;
+}
+
+figure{
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+img{
+	width: 100%;
+}
